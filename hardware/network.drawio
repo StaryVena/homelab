@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-19T13:20:06.795Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="fjFC6v3fCk0V-yZCnJNQ" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-19T13:24:57.316Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="agc7SG5GshwbPXYrWVX1" version="24.5.5" type="github">
   <diagram name="Stránka-1" id="fRde_ufNQvrDh1H7-GQY">
-    <mxGraphModel dx="329" dy="203" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2039" dy="1256" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -69,6 +69,25 @@
             <mxPoint x="414" y="762" as="sourcePoint" />
             <mxPoint x="521" y="272" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="_ODVPhk2NsiIrFTTZVYT-26" value="" style="orthogonalLoop=1;jettySize=auto;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;endArrow=oval;endFill=1;startArrow=oval;startFill=1;startSize=6;targetPerimeterSpacing=0;entryX=0.9;entryY=0.64;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_ODVPhk2NsiIrFTTZVYT-22" target="_ODVPhk2NsiIrFTTZVYT-7">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="576" y="762" as="sourcePoint" />
+            <mxPoint x="534" y="272" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="727" y="500" />
+              <mxPoint x="541" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_ODVPhk2NsiIrFTTZVYT-27" value="" style="orthogonalLoop=1;jettySize=auto;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;endArrow=oval;endFill=1;startArrow=oval;startFill=1;startSize=6;targetPerimeterSpacing=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="_ODVPhk2NsiIrFTTZVYT-29">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="20" y="75" as="sourcePoint" />
+            <mxPoint x="110" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_ODVPhk2NsiIrFTTZVYT-29" value="Optical fiber MM, LC - LC" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130.39" y="60" width="149.61" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
