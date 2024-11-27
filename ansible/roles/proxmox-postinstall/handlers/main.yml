@@ -1,0 +1,16 @@
+---
+- name: Restart pveproxy
+  ansible.builtin.service:
+    name: pveproxy
+    state: restarted
+
+- name: Update and upgrade apt packages
+  ansible.builtin.apt:
+    upgrade: true
+    update_cache: true
+    cache_valid_time: 86400 # One day
+
+- name: Restart sshd
+  ansible.builtin.service:
+    name: '{{ sshd }}'
+    state: restarted

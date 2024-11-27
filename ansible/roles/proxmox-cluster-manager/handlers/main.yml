@@ -1,0 +1,6 @@
+---
+- name: Create cluster
+  ansible.builtin.command: "pvecm create {{ proxmox_cluster_name }}"
+  when: "cluster_status.rc==1"
+  register: output
+  changed_when: output.rc != 0

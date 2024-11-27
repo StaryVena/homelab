@@ -1,0 +1,25 @@
+---
+- name: Remove the enterprise repo from sources list
+  ansible.builtin.file:
+    path: /etc/apt/sources.list.d/pve-enterprise.list
+    state: absent
+  notify:
+    - Update and upgrade apt packages
+
+- name: Remove the enterprise repo from ceph list
+  ansible.builtin.lineinfile:
+    path: /etc/apt/sources.list.d/ceph.list
+    regexp: '.*enterprise$'
+    state: absent
+  notify:
+    - Update and upgrade apt packages
+
+- name: Install packages
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+    state: present
+    pkg:
+      - vim
+      - sudo
+      - lsb-release

@@ -1,0 +1,6 @@
+---
+- name: Check cluster status
+  ansible.builtin.command: pvecm status
+  register: cluster_status
+  changed_when: "cluster_status.rc != 0"
+  notify: Create cluster

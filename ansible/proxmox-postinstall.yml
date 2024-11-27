@@ -1,0 +1,12 @@
+---
+- name: Playbook for proxmox post install steps
+  hosts: pve
+  become: true
+  roles:
+    - proxmox-postinstall
+    - simoncaron.pve_acme
+
+#- name: Playbook for setup cluster manager
+#  hosts: pve_manager
+#  roles:
+#    - proxmox-cluster-manager

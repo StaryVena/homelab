@@ -1,0 +1,34 @@
+---
+- name: Add Ceph repository for Proxmox
+  ansible.builtin.copy:
+    content: |
+      deb http://download.proxmox.com/debian/ceph-reef {{ ansible_facts['lsb']['codename'] }} no-subscription
+      deb http://download.proxmox.com/debian/ceph-quincy {{ ansible_facts['lsb']['codename'] }} no-subscription
+    dest: /etc/apt/sources.list.d/ceph.list
+    mode: '0644'
+  notify:
+    - Update and upgrade apt packages
+
+- name: Remove unlicensed Proxmox warning
+  ansible.builtin.replace:
+    path: /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
+    regexp: "res === null \\|\\| res === undefined \\|\\| \\!res \\|\\| res\\n\\t\\t\\t.data.status.toLowerCase\\(\\) \\!== 'active'"
+    replace: "false"
+    backup: true
+  notify:
+    - Restart pveproxy
+
+- name: Add No-Subscription repository
+  ansible.builtin.template:
+    src: templates/pve-no-subscription.list.j2
+    dest: /etc/apt/sources.list.d/pve-no-subscription.list
+    mode: '0644'
+  notify:
+    - Update and upgrade apt packages
+
+- name: Disable password login
+  ansible.builtin.lineinfile:
+    dest: '{{ sshd_config }}'
+    regexp: "^(#\\s*)?PasswordAuthentication "
+    line: "PasswordAuthentication no"
+  notify: Restart sshd

@@ -1,0 +1,6 @@
+---
+- name: Playbook for proxmox post install steps
+  hosts: pve
+  roles:
+    - proxmox-remove-enterprise-repo
+    - add-ansible-user
